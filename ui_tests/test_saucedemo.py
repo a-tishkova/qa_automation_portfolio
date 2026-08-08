@@ -24,3 +24,25 @@ def test_failed_login_saucedemo(page):
     
     # 5. Проверяем (assert), что текст ошибки содержит информацию о несовпадении данных
     assert "Username and password do not match any user in this service" in error_message
+
+
+
+
+
+def test_add_to_cart_saucedemo(page):
+    # 1. Авторизуемся на сайте
+    page.goto("https://saucedemo.com")
+    page.fill("#user-name", "standard_user")
+    page.fill("#password", "secret_sauce")
+    page.click("#login-button")
+    
+    # 2. Нажимаем кнопку "Add to cart" у первого товара (Рюкзак)
+    # Кнопка имеет уникальный ID: #add-to-cart-sauce-labs-backpack
+    page.click("#add-to-cart-sauce-labs-backpack")
+    
+    # 3. Переходим в корзину, кликнув по иконке корзины вверху справа
+    page.click(".shopping_cart_link")
+    
+    # 4. Проверяем (assert), что в корзине лежит именно рюкзак
+    # Ищем элемент названия товара на странице корзины
+    assert page.locator(".inventory_item_name").text_content() == "Sauce Labs Backpack"
