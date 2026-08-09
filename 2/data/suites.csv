@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2878","test_api_connection","api_tests","2026-08-09","passed","2026-08-09","","test_api","",""
+"","282","test_add_backpack_to_cart[chromium]","ui_tests","2026-08-09","passed","2026-08-09","","test_saucedemo","",""
+"","212","test_failed_login_with_wrong_password[chromium]","ui_tests","2026-08-09","passed","2026-08-09","","test_saucedemo","",""
+"","280","test_successful_login[chromium]","ui_tests","2026-08-09","passed","2026-08-09","","test_saucedemo","",""
